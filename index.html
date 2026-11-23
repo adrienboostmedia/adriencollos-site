@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Adrien COLLOS · Webinaires et système d'acquisition pour infopreneurs</title>
+<meta name="description" content="Adrien COLLOS met en place votre webinaire automatisé et votre système d'acquisition. Webinaires rémunérés uniquement au résultat. Réservez un appel.">
+<meta name="theme-color" content="#1b1013">
+<link rel="canonical" href="https://adriencollos.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Adrien COLLOS · Webinaires et système d'acquisition">
+<meta property="og:description" content="Webinaires rémunérés uniquement au résultat. Un seul interlocuteur, de la stratégie au jour J.">
+<meta property="og:url" content="https://adriencollos.com/">
+<meta property="og:image" content="https://adriencollos.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Adrien COLLOS, webinaire et système d'acquisition, rémunération uniquement au résultat">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="assets/scene-mobile.jpg" media="(orientation: portrait)">
+<link rel="preload" as="image" href="assets/scene-desktop.jpg" media="(orientation: landscape)">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-mode="landing">
+<a class="skip" href="#contenu">Passer l'intro et lire la version texte</a>
+
+<header class="hud" aria-label="Barre principale">
+  <span class="hud-name">Adrien COLLOS</span>
+  <span class="hud-mode">Mission principale : webinaires, uniquement au résultat</span>
+  <a class="btn btn-primary btn-sm" href="https://calendly.com/adrien-boostmedia/30min" target="_blank" rel="noopener">Réserver un appel</a>
+</header>
+
+<main>
+<section class="hero" id="jeu" aria-label="Carte interactive des missions">
+  <div class="viewport" id="viewport">
+    <div class="stage" id="stage">
+      <picture>
+        <source media="(orientation: portrait)" srcset="assets/scene-mobile.jpg">
+        <img id="scene" src="assets/scene-desktop.jpg" width="1672" height="941" alt="Un carrefour de ville au coucher du soleil, avec un studio, un bureau, une boutique et un atelier web." fetchpriority="high" decoding="async">
+      </picture>
+      <div class="pins" id="pins"></div>
+      <div class="avatar" id="avatar" role="img" aria-label="Avatar d'Adrien COLLOS"><span class="shadow"></span><span class="sprite"></span></div>
+      <svg class="debug" id="debug" hidden></svg>
+    </div>
+    <div class="shade" aria-hidden="true"></div>
+  </div>
+
+  <div class="hero-avatar" role="img" aria-label="Adrien COLLOS, debout, une main dans la poche, sourire en coin"><i class="ha-top"></i><i class="ha-bottom"></i></div>
+
+  <div class="card" id="card">
+    <p class="kicker">Adrien COLLOS · Marketing digital</p>
+    <h1><span class="big">Adrien</span><span class="small">Collos</span></h1>
+    <p class="promise">Webinaire.<br><span>Système d'acquisition.</span></p>
+    <p class="trust">Webinaires rémunérés <strong>uniquement au résultat</strong>&nbsp;: si le webinaire ne vend pas, nous ne gagnons pas.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://calendly.com/adrien-boostmedia/30min" target="_blank" rel="noopener">Réserver un appel</a>
+      <button class="btn btn-ghost" type="button" id="start">Lancer une mission</button>
+    </div>
+  </div>
+
+  <p class="toast" id="toast" role="status"></p>
+
+  <div class="map" id="map" aria-label="Mini-carte des missions"></div>
+
+  <nav class="chips" id="chips" aria-label="Missions"></nav>
+</section>
+
+<div id="contenu" class="plain">
+  <section class="wrap" aria-labelledby="t-missions">
+    <h2 id="t-missions">Quatre missions, un seul interlocuteur</h2>
+    <p class="lead">Rien n'est sous-traité. Choisissez la mission qui correspond à votre besoin, ou réservez un appel et nous regardons ensemble.</p>
+
+    <div class="missions" id="missions">
+
+      <article class="mission" id="m1" data-n="1" data-short="Webinaires" data-color="#ffd23f">
+        <h3 data-title>Webinaires et évènements en ligne</h3>
+        <p class="badge">Mission principale · rémunération uniquement au résultat</p>
+        <p class="scene">Imaginez le soir de votre live. Vous présentez, concentré sur votre message. Dans le chat, quelqu'un répond à chaque question. La technique tourne toute seule. À la fin, les candidatures arrivent dans l'agenda de votre closer.</p>
+        <p class="lead">Un webinaire automatisé et une régie complète le jour J, pour remplir l'agenda de votre closer, sans que ça fasse «&nbsp;vendeur&nbsp;».</p>
+
+        <h4>Le parcours de votre prospect, étape par étape, et ce que nous gérons pour vous</h4>
+        <ol class="journey">
+          <li><b>1 · La pub</b><span class="p"><em>Le prospect</em> fait défiler son fil, tombe sur une annonce qui décrit exactement son problème, et clique.</span><span class="c"><em>Nous</em> créons et pilotons les campagnes : angles, visuels, audiences, suivi du coût par inscrit. Chaque angle est validé par vous avant diffusion.</span></li>
+          <li><b>2 · L'inscription</b><span class="p"><em>Le prospect</em> arrive sur une page claire et s'inscrit en quelques secondes.</span><span class="c"><em>Nous</em> construisons la page d'inscription et branchons tout à votre CRM : chaque inscrit est identifié et suivi dès le premier clic.</span></li>
+          <li><b>3 · La confirmation</b><span class="p"><em>Le prospect</em> reçoit aussitôt un message WhatsApp personnalisé et un e-mail, et le webinaire s'ajoute à son agenda.</span><span class="c"><em>Nous</em> installons l'agent IA WhatsApp, la page de confirmation et l'ajout automatique à l'agenda.</span></li>
+          <li class="side"><b>Quête annexe · La communauté</b><span class="p"><em>Le prospect</em> peut rejoindre votre communauté avant même le direct, et se sentir déjà dans votre univers.</span><span class="c"><em>Nous</em> gérons la redirection et l'orientation vers les bons groupes.</span></li>
+          <li><b>4 · Les rappels</b><span class="p"><em>Le prospect</em> reçoit un SMS, un e-mail, un message Instagram : le rendez-vous est difficile à oublier.</span><span class="c"><em>Nous</em> paramétrons les séquences, les SMS et ManyChat pour le ramener devant le direct.</span></li>
+          <li><b>5 · Le jour J</b><span class="p"><em>Le prospect</em> suit votre live, pose ses questions, répond aux sondages. Quelqu'un lui répond en direct dans le chat.</span><span class="c"><em>Nous</em> tenons la régie : chat, sondages, liens et ressources, support technique. Vous vous concentrez sur votre présentation.</span></li>
+          <li><b>6 · La candidature</b><span class="p"><em>Le prospect</em> a envie d'aller plus loin : à la fin du direct, il remplit sa candidature.</span><span class="c"><em>Nous</em> préparons la page de candidature et envoyons les formulaires au bon moment du live.</span></li>
+          <li><b>7 · Les relances</b><span class="p"><em>Les absents et les indécis</em> n'ont pas disparu : ils reçoivent le bon message au bon moment.</span><span class="c"><em>Nous</em> gérons les séquences après le webinaire et la segmentation entre absents et participants.</span></li>
+          <li><b>8 · L'appel</b><span class="p"><em>Le prospect</em> réserve un appel avec votre closer. Il vous a écouté, il connaît votre méthode : l'échange démarre plus haut.</span><span class="c"><em>Nous</em> alimentons l'agenda du closer et suivons les conversions de bout en bout.</span></li>
+        </ol>
+        <p class="note">Ce que nous visons : un agenda de closer rempli de prospects qui vous ont déjà écouté, et des chiffres clairs à chaque étape.</p>
+
+        <aside class="proof">
+          <h4>Un exemple concret : Stretching School</h4>
+          <p>Pour Stretching School, notre dernier webinaire a généré environ 80 candidatures pour 1&nbsp;880&nbsp;€ de publicité, soit environ 33&nbsp;€ par appel de vente.</p>
+          <p>998 inscrits à moins de 2&nbsp;€ l'inscrit, et des participants restés en moyenne une heure en direct.</p>
+          <small>Résultats d'un cas précis&nbsp;: le coût d'acquisition dépend de votre niche. Ce n'est ni une moyenne ni une promesse.</small>
+        </aside>
+
+        <aside class="model">
+          <h4>Uniquement au résultat</h4>
+          <p>Notre rémunération dépend du résultat de votre webinaire. Si le webinaire ne vend pas, nous ne gagnons pas. Le budget publicitaire reste à votre charge&nbsp;: c'est de l'argent investi en publicité, pas une prestation. Le détail se voit pendant l'appel, selon votre projet.</p>
+        </aside>
+      </article>
+
+      <article class="mission" id="m2" data-n="2" data-short="Acquisition" data-color="#4fd8c8">
+        <h3 data-title>Système d'acquisition</h3>
+        <p class="scene">Imaginez : un inconnu découvre votre offre, laisse ses coordonnées, reçoit exactement les bons messages, puis réserve un rendez-vous dans votre agenda. Sans que vous ayez à relancer qui que ce soit à la main.</p>
+        <p class="lead">Un dispositif complet et automatisé pour générer un flux régulier de prospects et de rendez-vous qualifiés, adapté à votre métier, votre marché et vos offres.</p>
+        <ul class="list">
+          <li><b>On clarifie avant de construire</b> : à qui vous parlez, ce qui vous distingue, et par quel chemin un inconnu devient un rendez-vous.</li>
+          <li><b>Un dispositif sur-mesure</b> : un lead magnet que votre cible a envie de télécharger, des séquences e-mails qui s'envoient seules, une prise de rendez-vous fluide, un tri automatique de vos contacts.</li>
+          <li><b>Le tunnel complet</b> : pages de capture, de vente et de remerciement, bons de commande, paiement, offres complémentaires, espace membre. Du premier clic à l'accès client.</li>
+          <li><b>Le trafic qui alimente le tout</b> : campagnes publicitaires, tests, retargeting, ajustements du parcours.</li>
+          <li><b>Des chiffres que vous comprenez</b> : coût par prospect, conversions, inscriptions. Vous savez ce qui marche, et pourquoi.</li>
+        </ul>
+        <p class="note">Ce que nous visons : un flux régulier plutôt que des pics. Le détail se définit pendant un appel, selon votre situation.</p>
+      </article>
+
+      <article class="mission" id="m3" data-n="3" data-short="Publicités" data-color="#ff5e8a">
+        <h3 data-title>Gestion de publicités</h3>
+        <p class="scene">Votre tunnel est prêt, votre offre est solide. Il lui manque du trafic. Nous lançons vos campagnes et nous les pilotons avec la rigueur de quelqu'un qui regarde chaque euro dépensé.</p>
+        <p class="lead">Vous avez déjà votre tunnel et vous voulez le remplir&nbsp;? Nous lançons et pilotons vos campagnes.</p>
+        <ul class="list">
+          <li><b>Les bonnes plateformes</b> : Meta, Google et d'autres selon votre secteur. Là où se trouvent vos prospects, pas là où c'est à la mode.</li>
+          <li><b>Des tests en continu</b> : plusieurs messages, audiences et visuels mis en concurrence. Les meilleurs gardent le budget, les autres s'arrêtent. Le but : faire baisser le coût par prospect.</li>
+          <li><b>Le retargeting</b> : un visiteur intéressé qui repart sans s'inscrire n'est pas perdu, il revoit votre offre au bon moment.</li>
+          <li><b>Des chiffres clairs</b> : un point régulier, des décisions claires. Pas de rapport illisible.</li>
+          <li><b>Votre validation d'abord</b> : promesse, angle, visuels. Rien ne part sans votre accord.</li>
+        </ul>
+        <p class="note">Le détail se définit pendant un appel, selon votre situation.</p>
+      </article>
+
+      <article class="mission" id="m4" data-n="4" data-short="Site web" data-color="#9be564">
+        <h3 data-title>Création de site web</h3>
+        <p class="scene">Avant de vous écrire, un prospect vérifie votre site. Il lui faut quelques secondes pour décider si vous avez l'air sérieux. Vous venez de parcourir un exemple.</p>
+        <p class="lead">Un site moderne, clair et rapide pour mettre en avant votre expertise, renforcer votre crédibilité et générer des prises de contact qualifiées.</p>
+        <ul class="list">
+          <li><b>Sur-mesure</b> : pensé pour votre positionnement et votre identité visuelle. On vous reconnaît, on ne reconnaît pas un modèle.</li>
+          <li><b>Mobile d'abord</b> : la plupart de vos visiteurs arriveront depuis leur téléphone, le site est conçu pour eux en premier, puis adapté à l'ordinateur et à la tablette.</li>
+          <li><b>Un parcours qui mène à l'action</b> : chaque page a un but, chaque bouton mène à réserver, écrire ou candidater.</li>
+          <li><b>Les bases du référencement</b> : structure technique et hiérarchie des contenus.</li>
+          <li><b>Vos contenus</b> : mise en place de vos textes et visuels, avec un accompagnement possible à la rédaction.</li>
+        </ul>
+        <p class="note">Le détail se définit pendant un appel, selon votre situation.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="wrap" aria-labelledby="t-faq">
+    <h2 id="t-faq">Vos questions</h2>
+    <details><summary>Combien ça coûte&nbsp;?</summary><p>Pour les webinaires, notre rémunération est uniquement au résultat&nbsp;: si le webinaire ne vend pas, nous ne gagnons pas. Le budget publicitaire reste à votre charge. Pour les autres missions, le tarif dépend de votre projet. Dans tous les cas, nous en parlons pendant l'appel.</p></details>
+    <details><summary>Le webinaire, ça ne marche plus, ou ça fait trop «&nbsp;vendeur&nbsp;»…</summary><p>Notre objectif n'est pas le nombre d'inscrits mais la candidature qualifiée&nbsp;: un prospect qui a passé du temps avec vous avant l'appel. Pour Stretching School, les participants sont restés en moyenne une heure en direct.</p></details>
+    <details><summary>J'ai déjà essayé un webinaire et ça n'a pas marché.</summary><p>Souvent, le problème vient d'un point précis&nbsp;: la promesse, la publicité, les relances, la régie ou le passage à la candidature. Nous commençons par l'identifier pendant l'appel.</p></details>
+    <details><summary>J'ai déjà un tunnel (VSL, quiz) qui tourne.</summary><p>Le webinaire s'ajoute à votre tunnel existant&nbsp;: il alimente l'agenda de votre closer sans le remplacer.</p></details>
+    <details><summary>Je n'ai pas le temps de gérer tout ça.</summary><p>Vous avez un seul interlocuteur pour tout&nbsp;: stratégie, tunnel, automatisations, publicité et régie le jour J. Rien n'est sous-traité.</p></details>
+    <details><summary>Et si je n'ai pas de closer&nbsp;?</summary><p>C'est un point à aborder pendant l'appel, selon votre situation.</p></details>
+  </section>
+
+  <section class="wrap about" aria-labelledby="t-about">
+    <p class="about-kicker">Qui est Adrien&nbsp;?</p>
+    <h2 id="t-about">«&nbsp;Si le webinaire ne vend pas, je ne gagne pas.&nbsp;»</h2>
+    <div class="about-body">
+      <p class="about-lead">Vous connaissez le marché actuel. Une agence promet des inscrits, des leads, de la croissance. La facture arrive tout de suite. Les résultats, eux, se font attendre.</p>
+      <p>Je m'appelle Adrien. Je me spécialise dans l'acquisition de clients en ligne depuis 2024.</p>
+      <p>Pourquoi mettre l'accent sur les webinaires&nbsp;? D'abord pour une raison très concrète&nbsp;: en ce moment, c'est la stratégie qui me donne les meilleurs coûts par inscrit (cela dépend de chaque niche). Ensuite parce que c'est le seul format où un inconnu passe du temps avec vous avant de vous parler. Lors de notre dernier webinaire, les participants sont restés en moyenne <strong>une heure</strong> en direct.</p>
+      <p>Mon travail&nbsp;: construire la stratégie marketing qui fait de l'acquisition une expérience <strong>fluide, cohérente, et qui inspire confiance</strong>. De la publicité à l'appel, votre prospect ne doit sentir aucune rupture. Je m'occupe de tout, et le jour J, je suis en régie, dans le chat, pendant que vous présentez. <strong>Un seul interlocuteur. Rien n'est sous-traité.</strong></p>
+      <p><strong>Full éthique.</strong> La promesse, l'angle marketing, les messages&nbsp;: tout est validé par vous avant diffusion. Rien ne part sans votre accord.</p>
+      <p>Je suis rigoureux, réactif, et j'aime livrer plus que ce qui était prévu.</p>
+      <p>Et le risque&nbsp;? Je le prends avec vous. Pour les webinaires, ma rémunération dépend du résultat. Ce n'est pas un slogan&nbsp;: c'est ma façon de vous montrer que je crois à ce que je construis.</p>
+      <p>Je ne prends pas tous les projets. Je travaille avec des infopreneurs dont l'offre se vend déjà. Si le webinaire n'a pas de sens pour vous, je vous le dirai pendant l'appel, même si cela veut dire que nous ne travaillerons pas ensemble.</p>
+      <p class="about-sign">Adrien COLLOS</p>
+      <p class="about-cta"><a class="btn btn-primary" href="https://calendly.com/adrien-boostmedia/30min" target="_blank" rel="noopener">Réserver un appel de 30&nbsp;minutes</a> <a class="btn btn-dark" href="https://www.linkedin.com/in/adrien-collos-795b80221/" target="_blank" rel="noopener">Mon profil LinkedIn</a></p>
+    </div>
+  </section>
+
+  <section class="wrap final" aria-labelledby="t-final">
+    <h2 id="t-final">Prêt à remplir votre agenda&nbsp;?</h2>
+    <p class="lead">Réservez un appel&nbsp;: nous regardons votre projet et nous vous disons honnêtement si un webinaire a du sens pour vous.</p>
+    <a class="btn btn-primary" href="https://calendly.com/adrien-boostmedia/30min" target="_blank" rel="noopener">Réserver un appel</a>
+  </section>
+
+  <footer class="wrap foot">
+    <p>Adrien COLLOS · Entreprise individuelle · SIREN 948 117 486 · 40 cours Édouard Vaillant, 33300 Bordeaux</p>
+    <p><a href="mailto:adrien.boostmedia@gmail.com">adrien.boostmedia@gmail.com</a> · <a href="https://wa.me/33689753526" target="_blank" rel="noopener">WhatsApp</a></p>
+    <p><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Politique de confidentialité</a></p>
+  </footer>
+</div>
+</main>
+
+<dialog id="mission-dialog" aria-labelledby="md-title">
+  <div class="dlg">
+    <button class="x" type="button" data-close aria-label="Fermer">×</button>
+    <p class="md-kicker" id="md-kicker"></p>
+    <h2 id="md-title"></h2>
+    <div id="md-body"></div>
+    <div class="md-foot"><a class="btn btn-primary" href="https://calendly.com/adrien-boostmedia/30min" target="_blank" rel="noopener">En parler lors d'un appel</a></div>
+  </div>
+</dialog>
+
+<a class="wa" href="https://wa.me/33689753526?text=Bonjour%20Adrien%2C%20je%20vous%20%C3%A9cris%20depuis%20votre%20site." target="_blank" rel="noopener" aria-label="Écrire à Adrien sur WhatsApp">
+  <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.8 2 6.8L3 29l6.6-1.9c1.9 1 4 1.6 6.4 1.6 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.300c-2.100 0-4-.6-5.700-1.600l-.4-.2-3.900 1.100 1.100-3.800-.3-.4a10.200 10.200 0 0 1-1.600-5.500C5.200 10.200 10 5.600 16 5.600s10.800 4.600 10.800 10.200S21.900 26.300 16 26.300zm5.900-7.600c-.3-.2-1.900-.9-2.200-1-.3-.1-.5-.2-.7.200-.2.300-.8 1-1 1.200-.2.200-.4.200-.7.100-.3-.2-1.400-.5-2.600-1.600-1-.9-1.600-1.900-1.800-2.200-.2-.3 0-.5.100-.7l.5-.6c.2-.2.200-.3.300-.5.100-.2.100-.4 0-.6l-1-2.300c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.100-.9.400-.3.300-1.200 1.100-1.200 2.800s1.200 3.200 1.400 3.500c.2.200 2.400 3.700 5.900 5.100 3.500 1.400 3.500.9 4.100.9.600-.1 2-.8 2.300-1.600.3-.8.300-1.500.2-1.600-.1-.2-.3-.3-.6-.4z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<script src="main.js"></script>
+</body>
+</html>
