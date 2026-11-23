@@ -22,38 +22,25 @@
 <header class="legal-top"><a class="legal-back" href="index.html">← Retour au site</a><span class="hud-name">Adrien COLLOS</span></header>
 <main class="doc book">
   <p class="about-kicker">Réserver un appel</p>
-  <h1>30 minutes pour y voir clair</h1>
-  <p class="lead">Vous nous présentez votre offre et votre tunnel actuel. Nous vous disons honnêtement si un webinaire a du sens pour vous, et comment nous nous y prendrions.</p>
+  <h1>Choisissez votre créneau</h1>
+  <p class="lead">30 minutes pour regarder votre offre et savoir si un webinaire a du sens pour vous.</p>
 
-  <ol class="book-steps">
-    <li><b>Vous expliquez</b> ce que vous vendez, à qui, et comment vos prospects arrivent aujourd'hui.</li>
-    <li><b>Nous disons ce que nous en pensons</b>, y compris si ce n'est pas le bon moment pour vous.</li>
-    <li><b>Si c'est pertinent</b>, nous parlons de la suite. Pour les webinaires, notre rémunération dépend du résultat&nbsp;: le détail se voit pendant l'appel.</li>
-  </ol>
-  <p class="note">Sans pression&nbsp;: vous repartez avec un avis clair, même si nous ne travaillons pas ensemble.</p>
+  <section class="cal" id="cal" aria-label="Calendrier de réservation">
+    <iframe class="cal-frame" title="Calendrier de réservation (Calendly)" src="https://calendly.com/adrien-boostmedia/30min?embed_domain=adriencollos.com&amp;embed_type=Inline&amp;hide_gdpr_banner=1&amp;background_color=fff8ec&amp;text_color=1b1013&amp;primary_color=1b1013"></iframe>
+    <p class="cal-note">Le calendrier ne s'affiche pas&nbsp;? <a href="https://calendly.com/adrien-boostmedia/30min" target="_blank" rel="noopener">Ouvrez-le dans un nouvel onglet</a>.</p>
+  </section>
 
-  <section class="cal" id="cal" aria-labelledby="cal-title">
-    <h2 id="cal-title">Choisissez votre créneau</h2>
-    <div id="cal-slot">
-      <button class="btn btn-primary" id="cal-load" type="button">Afficher le calendrier</button>
-      <p class="cal-note">Le calendrier est fourni par Calendly. En l'affichant, vous chargez un service externe qui peut déposer des cookies (voir la <a href="confidentialite.html">politique de confidentialité</a>).</p>
-      <p class="cal-note"><a href="https://calendly.com/adrien-boostmedia/30min" target="_blank" rel="noopener">Ou ouvrir Calendly dans un nouvel onglet</a></p>
-    </div>
-    <noscript><p><a class="btn btn-primary" href="https://calendly.com/adrien-boostmedia/30min" target="_blank" rel="noopener">Ouvrir le calendrier</a></p></noscript>
+  <section class="book-after" aria-labelledby="after-title">
+    <h2 id="after-title">Comment se passe l'appel</h2>
+    <ol class="book-steps">
+      <li><b>Vous expliquez</b> ce que vous vendez, à qui, et comment vos prospects arrivent aujourd'hui.</li>
+      <li><b>Nous disons ce que nous en pensons</b>, y compris si ce n'est pas le bon moment pour vous.</li>
+      <li><b>Si c'est pertinent</b>, nous parlons de la suite. Pour les webinaires, notre rémunération dépend du résultat&nbsp;: le détail se voit pendant l'appel.</li>
+    </ol>
+    <p class="note">Sans pression&nbsp;: vous repartez avec un avis clair, même si nous ne travaillons pas ensemble.</p>
+    <p class="cal-note">Le calendrier est fourni par Calendly, qui peut déposer des cookies (voir la <a href="confidentialite.html">politique de confidentialité</a>).</p>
   </section>
 </main>
 <footer class="doc-foot"><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a> · <a href="index.html">Accueil</a></footer>
-<script>
-document.getElementById('cal-load').addEventListener('click', function () {
-  var f = document.createElement('iframe');
-  f.src = 'https://calendly.com/adrien-boostmedia/30min?embed_domain=adriencollos.com&embed_type=Inline&hide_gdpr_banner=1&background_color=fff8ec&text_color=1b1013&primary_color=1b1013';
-  f.title = 'Calendrier de réservation (Calendly)';
-  f.loading = 'lazy';
-  f.className = 'cal-frame';
-  var slot = document.getElementById('cal-slot');
-  slot.textContent = '';
-  slot.appendChild(f);
-});
-</script>
 </body>
 </html>

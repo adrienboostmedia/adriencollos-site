@@ -242,3 +242,10 @@ body.legal{background:var(--paper);color:var(--ink)}
 .cal-note{font-size:14px;color:#5a4538;margin:12px 0 0;max-width:620px}
 .cal-frame{width:100%;height:760px;border:0;border-radius:14px;background:#fff8ec}
 @media(max-width:640px){.cal-frame{height:820px}}
+
+/* page de réservation : calendrier en premier, grand */
+.book{max-width:1000px}
+.book .cal{margin-top:18px;padding-top:0}
+.book .cal-frame{height:820px;box-shadow:0 8px 0 var(--ink);border:3px solid var(--ink);border-radius:18px}
+.book-after{margin-top:38px}
+@media(max-width:640px){.book .cal-frame{height:860px}}
