@@ -249,3 +249,16 @@ body.legal{background:var(--paper);color:var(--ink)}
 .book .cal-frame{height:820px;box-shadow:0 8px 0 var(--ink);border:3px solid var(--ink);border-radius:18px}
 .book-after{margin-top:38px}
 @media(max-width:640px){.book .cal-frame{height:860px}}
+
+/* mission 1 : bénéfices clients */
+.benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:12px 0 0}
+.benefit{background:#fff;border:2px solid var(--ink);border-top:8px solid var(--c,var(--yel));border-radius:14px;padding:14px 16px}
+.benefit b{display:block;font:400 21px/1.1 var(--display);text-transform:uppercase;letter-spacing:.01em;margin-bottom:8px}
+.benefit p{margin:0;font-size:16px;line-height:1.45}
+.yourpart{margin:16px 0 0;padding:12px 16px;background:var(--ink);color:var(--sand);border-radius:12px;font-size:17px}
+.yourpart b{color:var(--yel)}
+.benefits .benefit:last-child:nth-child(odd){grid-column:1/-1}
+
+/* accroche chiffrée de la mission 1 */
+.headline{margin:8px 0 12px;font:400 clamp(26px,4.2vw,36px)/1.05 var(--display);text-transform:uppercase}
+.scene small{display:block;margin-top:8px;font-size:13px;font-weight:500;color:#5a4538}
