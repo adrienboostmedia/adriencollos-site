@@ -262,3 +262,20 @@ body.legal{background:var(--paper);color:var(--ink)}
 /* accroche chiffrée de la mission 1 */
 .headline{margin:8px 0 12px;font:400 clamp(26px,4.2vw,36px)/1.05 var(--display);text-transform:uppercase}
 .scene small{display:block;margin-top:8px;font-size:13px;font-weight:500;color:#5a4538}
+
+/* mission 1 : bandeau « uniquement au résultat » */
+.resultbanner{margin:4px 0 14px;padding:16px 20px;background:var(--ink);color:var(--sand);border-radius:16px;border-left:10px solid var(--yel);display:grid;gap:2px}
+.resultbanner span{font:800 13px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--yel)}
+.resultbanner strong{font:400 clamp(34px,6vw,54px)/1 var(--display);text-transform:uppercase;color:#fff}
+.resultbanner em{font-style:normal;font-size:17px;color:var(--sand)}
+/* mission 1 : parcours relié par un fil et des flèches */
+.flow{list-style:none;margin:16px 0 0;padding:0}
+.flow li{position:relative;display:grid;grid-template-columns:46px 1fr;gap:16px;align-items:start;padding-bottom:38px}
+.flow li:last-child{padding-bottom:0}
+.flow .n{position:relative;z-index:2;width:46px;height:46px;border-radius:50%;background:var(--yel);border:3px solid var(--ink);display:grid;place-items:center;font:400 24px/1 var(--display)}
+.flow li:not(:last-child)::before{content:"";position:absolute;left:21.5px;top:46px;bottom:14px;width:3px;background:repeating-linear-gradient(to bottom,var(--ink) 0 8px,transparent 8px 14px)}
+.flow li:not(:last-child)::after{content:"";position:absolute;left:12px;bottom:2px;width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:15px solid var(--ink)}
+.flow .fc{background:#fff;border:2px solid var(--ink);border-radius:14px;padding:12px 16px;box-shadow:4px 4px 0 var(--ink)}
+.flow .fc b{display:block;font:400 21px/1.1 var(--display);text-transform:uppercase;margin-bottom:6px}
+.flow .fc p{margin:0;font-size:16px;line-height:1.45}
+@media(max-width:520px){.flow li{grid-template-columns:38px 1fr;gap:12px}.flow .n{width:38px;height:38px;font-size:20px}.flow li:not(:last-child)::before{left:17.5px;top:38px}.flow li:not(:last-child)::after{left:8px}}
