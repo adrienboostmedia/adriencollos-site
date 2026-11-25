@@ -51,13 +51,12 @@ body[data-mode="landing"] .stage img{filter:brightness(.92)}
 /* pastilles de mission */
 .pins{position:absolute;inset:0}
 .pin{position:absolute;z-index:6;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;gap:6px;border:0;background:none;padding:6px;cursor:pointer;font-family:var(--body);color:#fff}
-.pin .dot{width:var(--pd,64px);height:var(--pd,64px);border-radius:50%;display:grid;place-items:center;background:var(--c);color:#1b1013;font:400 calc(var(--pd,64px)*.55)/1 var(--display);border:calc(var(--pd,64px)*.07) solid #1b1013;box-shadow:0 0 0 calc(var(--pd,64px)*.06) #fff,0 8px 18px #0008;animation:bob 2.2s ease-in-out infinite}
+.pin .dot{width:var(--pd,64px);height:var(--pd,64px);border-radius:50%;display:grid;place-items:center;background:var(--c);color:#1b1013;font:400 calc(var(--pd,64px)*.55)/1 var(--display);border:calc(var(--pd,64px)*.07) solid #1b1013;box-shadow:0 0 0 calc(var(--pd,64px)*.06) #fff,0 8px 18px #0008}
 .pin .lbl{font-weight:800;font-size:var(--pf,20px);letter-spacing:.02em;background:#1b1013e6;color:#fff;border-radius:8px;padding:.25em .6em;white-space:nowrap;border:1px solid var(--c)}
 .pin:hover .dot,.pin.on .dot{transform:scale(1.12)}
-.pin::after{content:"";position:absolute;left:50%;top:calc(var(--pd,64px) + 4px);width:var(--pd,64px);height:var(--pd,64px);margin-left:calc(var(--pd,64px)/-2);border-radius:50%;border:3px solid var(--c);opacity:0;animation:ring 2.2s infinite;pointer-events:none}
+.pin::after{content:"";position:absolute;left:50%;top:calc(var(--pd,64px) + 4px);width:var(--pd,64px);height:var(--pd,64px);margin-left:calc(var(--pd,64px)/-2);border-radius:50%;border:3px solid var(--c);opacity:0;pointer-events:none}
 @keyframes bob{50%{transform:translateY(-6px)}}
 @keyframes ring{0%{opacity:.9;transform:scale(.8)}100%{opacity:0;transform:scale(1.7)}}
-body[data-mode="landing"] .pin{opacity:.55}
 
 /* carte d'accueil */
 .card{position:absolute;z-index:10;left:clamp(18px,5vw,84px);top:50%;transform:translateY(-46%);width:min(560px,calc(100% - 36px));transition:opacity .5s,transform .5s;display:flex;flex-direction:column;gap:14px}
@@ -279,3 +278,74 @@ body.legal{background:var(--paper);color:var(--ink)}
 .flow .fc b{display:block;font:400 21px/1.1 var(--display);text-transform:uppercase;margin-bottom:6px}
 .flow .fc p{margin:0;font-size:16px;line-height:1.45}
 @media(max-width:520px){.flow li{grid-template-columns:38px 1fr;gap:12px}.flow .n{width:38px;height:38px;font-size:20px}.flow li:not(:last-child)::before{left:17.5px;top:38px}.flow li:not(:last-child)::after{left:8px}}
+
+/* missions 2 à 4 : accroche + paragraphe */
+.hook{margin:8px 0 14px;font:400 clamp(28px,5vw,42px)/1.05 var(--display);text-transform:uppercase}
+.pitch{margin:0;font-size:19px;line-height:1.55;max-width:62ch}
+/* listes d'arguments des missions 2 à 4 */
+.perks{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px}
+.perks li{position:relative;padding:2px 0 2px 34px;font-size:17px;line-height:1.5}
+.perks li::before{content:"";position:absolute;left:0;top:3px;width:22px;height:22px;border-radius:50%;background:var(--c,var(--yel));border:2.5px solid var(--ink)}
+.perks li::after{content:"";position:absolute;left:7px;top:8px;width:6px;height:10px;border:solid var(--ink);border-width:0 3px 3px 0;transform:rotate(40deg) scale(.8);transform-origin:center}
+.perks b{font-weight:800}
+
+/* titre de chaque mission souligné à la couleur de la mission */
+#md-title{text-decoration:underline;text-decoration-color:var(--c,var(--yel));text-decoration-thickness:6px;text-underline-offset:1px;text-decoration-skip-ink:none}
+
+/* preuve : chiffres en grand */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:10px;margin:12px 0 10px}
+.stat{background:#ffffff12;border:2px solid #ffffff30;border-top:5px solid var(--yel);border-radius:12px;padding:10px 12px;display:grid;gap:4px}
+.stat strong{font:400 clamp(28px,4.4vw,36px)/1 var(--display);color:var(--yel)}
+.stat span{font-size:14px;line-height:1.25;color:var(--sand)}
+
+/* header : message + barre (marque, navigation, bouton) */
+.hud{display:block;padding:0;gap:0;background:linear-gradient(#1b1013e6 45%,#1b101300)}
+.hud.solid{background:#1b1013f5;box-shadow:0 6px 20px #0006;transition:background .3s}
+.hud-strip{margin:0;background:none;color:var(--sand);text-align:center;padding:7px 12px 0;font:700 12.5px/1.2 var(--body);letter-spacing:.09em;text-transform:uppercase;pointer-events:auto;text-shadow:0 2px 8px #000a}
+.hud-strip b{color:var(--yel);font-weight:800}
+.hud-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:8px 16px 10px;background:none;pointer-events:none}
+.hud-bar>*{pointer-events:auto}
+.hud-brand{display:flex;align-items:center;text-decoration:none}
+.hud-name{color:var(--yel)}
+.hud-nav{display:none}
+.hud-nav a{color:var(--sand);text-decoration:none;font:700 15px/1 var(--body);letter-spacing:.02em;padding:10px 4px;text-shadow:0 2px 10px #000c;border-bottom:3px solid transparent}
+.hud-nav a:hover,.hud-nav a:focus-visible{border-bottom-color:var(--yel)}
+@media(min-width:820px){.hud-nav{display:flex;gap:26px;margin:0 auto}}
+@media(max-width:520px){.hud-strip{font-size:10.5px;letter-spacing:.06em;padding:6px 8px 0}}
+#t-missions,#t-about,#t-faq{scroll-margin-top:120px}
+.toast{top:112px}
+@media(max-width:899px),(orientation:portrait){.card{top:104px}.toast{top:100px}}
+/* petits écrans : la mini-carte ne masque pas les boutons de l'accueil */
+@media(max-height:760px) and (max-width:899px){body[data-mode="landing"] .map{opacity:0;pointer-events:none}}
+/* mobile : le message d'aide tient sur une ligne et ne masque pas les missions */
+@media(max-width:899px),(orientation:portrait){.toast{width:max-content;max-width:calc(100% - 20px);font-size:13.5px;padding:7px 14px;border-radius:999px;top:96px}}
+
+/* version texte : titre de chaque mission souligné à sa couleur */
+.plain .mission h3{text-decoration:underline;text-decoration-color:var(--c,var(--yel));text-decoration-thickness:6px;text-underline-offset:1px;text-decoration-skip-ink:none}
+/* mobile : bouton WhatsApp plus discret */
+@media(max-width:699px){.wa{width:46px;height:46px;min-height:46px;padding:0;justify-content:center;left:12px;bottom:12px}.wa svg{width:26px;height:26px}}
+
+/* accueil : pastilles masquées (elles apparaissent au lancement du jeu) */
+.pins{transition:opacity .5s}
+body[data-mode="landing"] .pins{opacity:0;pointer-events:none}
+/* pastilles : léger gonflement / dégonflement, plus marqué au survol */
+.pin .dot{transition:transform .25s ease;animation:breathe 3.2s ease-in-out infinite}
+.pin:hover .dot,.pin.on .dot{animation:none;transform:scale(1.14)}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+/* accroche : l'idée centrale doit se lire d'un coup d'oeil */
+.kicker{font-size:18px;letter-spacing:.12em}
+@media(max-width:899px),(orientation:portrait){.kicker{font-size:13.5px;letter-spacing:.1em}}
+@media(max-height:700px) and (max-width:899px){.kicker{display:block}}
+
+/* mobile : le grand avatar d'Adrien est aussi présent à l'accueil */
+@media(max-width:899px),(orientation:portrait){
+  .hero-avatar{display:block;position:absolute;z-index:8;left:50%;bottom:0;transform:translateX(-50%);height:clamp(160px,calc(100% - 478px),440px);aspect-ratio:512/1484;pointer-events:none;filter:drop-shadow(0 14px 18px #0009);transition:opacity .6s,transform .7s cubic-bezier(.3,.7,.2,1)}
+  .hero-avatar i{position:absolute;left:0;width:100%;height:50.14%;background-size:100% 100%;background-repeat:no-repeat}
+  .hero-avatar .ha-top{top:0;background-image:url(assets/hero-adrien-top.avif)}
+  .hero-avatar .ha-bottom{bottom:0;background-image:url(assets/hero-adrien-bottom.avif)}
+  body[data-mode="game"] .hero-avatar{opacity:0;transform:translateX(-50%) translateY(40px)}
+  .avatar{transition:opacity .5s .3s}
+  body[data-mode="landing"] .avatar{opacity:0}
+  body[data-mode="landing"] .map{opacity:0;pointer-events:none}
+  .map{transition:opacity .5s .3s}
+}

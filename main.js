@@ -27,7 +27,7 @@
     },
     mobile: {
       W: 941, H: 1672, avatarPx: 128, pinPx: 46, dotR: 96,
-      nodes: { C:[480,820], T:[480,705], TL:[340,705], S1:[250,702], TR:[630,705], S2:[740,702], SP:[480,1250],
+      nodes: { C:[480,820], T:[480,705], TL:[340,705], S1:[250,702], TR:[630,705], S2:[740,702], SP:[480,1500],
                W:[385,935], SW:[335,975], S3:[290,1010], E:[580,935], SE:[635,975], S4:[690,1010] },
       edges: [['C','T'],['T','TL'],['TL','S1'],['T','TR'],['TR','S2'],['C','W'],['W','SW'],['SW','S3'],['C','E'],['E','SE'],['SE','S4'],['SP','C']],
       spots: ['S1','S2','S3','S4'],
@@ -202,7 +202,7 @@
   function enterGame(msg) {
     if (body.dataset.mode !== 'game') {
       body.dataset.mode = 'game';
-      say(msg || 'Cliquez sur un bâtiment ou choisissez une mission.');
+      say(msg || (matchMedia('(max-width:899px),(orientation:portrait)').matches ? 'Touchez une mission.' : 'Cliquez sur un bâtiment ou choisissez une mission.'));
     }
   }
   let toastT;
@@ -250,5 +250,22 @@
   // précharge les 3 bandes de marche
   Object.values(SPR).forEach(s => { const i = new Image(); i.src = s.src; });
   setup();
+
+  /* mobile : le grand avatar occupe la place libre sous le texte d'accueil */
+  (function () {
+    const hero = $('.hero'), card = $('#card'), av = $('.hero-avatar');
+    if (!hero || !card || !av) return;
+    const small = matchMedia('(max-width:899px),(orientation:portrait)');
+    const fit = () => {
+      if (!small.matches) { av.style.removeProperty('height'); return; }
+      const free = hero.clientHeight - (card.offsetTop + card.offsetHeight) - 6;
+      av.style.height = Math.max(150, Math.min(440, free)) + 'px';
+    };
+    fit();
+    addEventListener('resize', fit);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+    addEventListener('load', fit);
+  })();
+
   window.__site = { goMission, enter: enterGame, get cur() { return cur; } };
 })();
