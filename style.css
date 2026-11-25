@@ -415,3 +415,22 @@ body[data-mode="landing"] .pins{opacity:0;pointer-events:none}
 .seo .proof h4,.seo .proof small{color:inherit}
 .seo .proof h4{color:var(--yel)}
 .model .more{margin:14px 0 0}.model .more a{font-weight:800;color:#6a3a00}
+.seo-journey li{padding-bottom:18px}
+.seo-journey .p{display:block;margin-top:6px}
+.seo-journey .c{display:block;margin-top:6px;color:#0b5a50}
+.seo-journey em{font-style:normal;font-weight:800}
+.seo a{color:#8a2a00;font-weight:700}
+.seo .btn{color:#2a1b00;text-decoration:none;font-weight:800}
+.seo .btn-dark{color:var(--sand)}
+.seo-journey li.side{counter-increment:none;background:#e9fbf8;border-style:dashed}
+.seo-journey li.side::before{content:"+";background:var(--teal)}
+.seo-journey .p em{color:#a14a00}
+.seo-journey .c em{color:#0b6e63}
+
+/* page de contenu : reprise à l'identique des textes de la mission 1 */
+.mission-copy{display:flex;flex-direction:column;gap:26px;margin-top:22px}
+.mission-copy>*{margin:0}
+.mission-copy h4{font:400 22px/1.1 var(--display);text-transform:uppercase;letter-spacing:.02em}
+.mission-copy p.headline{font-size:clamp(23px,3.3vw,30px);line-height:1.18}
+.mission-copy .scene small{font-size:13px}
+.mission-copy .yourpart{font-size:17px}
