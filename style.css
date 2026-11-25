@@ -392,3 +392,26 @@ body[data-mode="landing"] .pins{opacity:0;pointer-events:none}
 .stat{padding:12px 11px}
 .stat strong{font-size:clamp(24px,3.4vw,30px)}
 .stat span{font-size:13px}
+
+/* pages de contenu (référencement) */
+.seo{max-width:820px}
+.seo h1{font-size:clamp(30px,5vw,46px);line-height:1.08;text-transform:none;font-family:var(--display)}
+.seo .lead{font-size:20px;line-height:1.65;margin:20px 0 6px}
+.seo h2{margin:46px 0 14px}
+.seo p{line-height:1.75;margin:0 0 16px}
+.seo .cta-row{margin:22px 0 0;display:flex;flex-wrap:wrap;gap:12px}
+.seo-steps{list-style:none;counter-reset:s;margin:18px 0;padding:0;display:grid;gap:14px}
+.seo-steps li{counter-increment:s;position:relative;background:#fff;border:2px solid var(--ink);border-radius:14px;padding:16px 18px 16px 62px;line-height:1.65}
+.seo-steps li::before{content:counter(s);position:absolute;left:16px;top:14px;width:34px;height:34px;border-radius:50%;background:var(--yel);border:3px solid var(--ink);display:grid;place-items:center;font:400 19px/1 var(--display)}
+.seo-steps b{font-weight:800}
+.seo details{background:#fff;border:2px solid var(--ink);border-radius:12px;padding:14px 18px;margin:0 0 12px}
+.seo summary{font-weight:800;cursor:pointer;line-height:1.4}
+.seo details p{margin:10px 0 0}
+.seo-end{margin-top:46px;padding:26px 24px;background:var(--ink);color:var(--sand);border-radius:18px}
+.seo-end h2{margin-top:0;color:#fff}
+.seo-end p{margin-bottom:0}
+.seo-end .cta-row{margin-top:20px}
+.seo .proof{margin-top:6px}
+.seo .proof h4,.seo .proof small{color:inherit}
+.seo .proof h4{color:var(--yel)}
+.model .more{margin:14px 0 0}.model .more a{font-weight:800;color:#6a3a00}
